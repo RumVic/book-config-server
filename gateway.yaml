@@ -25,7 +25,7 @@ spring:
           predicates:
             - Path=/image/**
 
-        - id: book-audit-service
+        - id: book-audit
           uri: lb://book-audit # Replace with the correct service ID
           predicates:
             - Method=POST
