@@ -1,6 +1,6 @@
 # application.yml
 server:
-  port: 8383
+  port: 8686
 spring:
   application:
     name: book-audit

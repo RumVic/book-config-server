@@ -1,6 +1,6 @@
 # application.yml
 server:
-  port: 8282
+  port: 8787
 spring:
   application:
     name: book-service
