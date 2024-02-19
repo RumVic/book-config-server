@@ -6,7 +6,7 @@ spring:
     name: book-audit
   cloud:
     consul:
-      host: localhost
+      host: consul
       port: 8500
       discovery:
         enabled: true  # Enable service discovery
