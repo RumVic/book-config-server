@@ -27,9 +27,9 @@ spring:
     driver: org.postgresql.Driver
   data:
     mongodb:
-      uri: mongodb://mongo-1:27017/books
+      uri: mongodb://mongo:27017
       username: mongodb
-      password: mongodb
+      password: admin
       profiles:
         active: dev
   jpa:
