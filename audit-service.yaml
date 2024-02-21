@@ -21,7 +21,7 @@ spring:
       # password: mongodb
       # profiles:
       #   active: dev
-      host: mongo-1
+      host: mongo
       username: mongodb
       password: admin
       database: image_books
