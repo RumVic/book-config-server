@@ -27,9 +27,11 @@ spring:
     driver: org.postgresql.Driver
   data:
     mongodb:
-      uri: mongodb://mongo:27017
+      host: mongo
       username: mongodb
       password: admin
+      database: image_books
+      port: 27017
       profiles:
         active: dev
   jpa:
