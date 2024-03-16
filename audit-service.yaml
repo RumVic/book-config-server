@@ -14,6 +14,7 @@ spring:
         register: true
         instanceId: ${spring.application.name}:${spring.cloud.client.hostname}
   #        :${server.port}
+  #mongo
   data:
     mongodb:
       # uri: mongodb://localhost:27017/books_audit
@@ -28,6 +29,17 @@ spring:
       port: 27017
       profiles:
         active: dev
+  #kafka
+  kafka:
+    bootstrap-servers: kafka1:9092
+    # producer:
+    #   key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    #   value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      # group-id: my-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 management:
   endpoints:
     web:
