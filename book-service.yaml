@@ -29,7 +29,7 @@ spring:
     mongodb:
       uri: mongodb://mongo-1:27017/image_books
       # host: mongo-1
-      # username: mongodb
+      username: mongodb
       password: admin
       # database: image_books
       # port: 27017
