@@ -22,7 +22,7 @@ spring:
       # password: mongodb
       # profiles:
       #   active: dev
-      uri: mongodb://mongo-1:27017/books_audit
+      uri: mongodb://mongo:27017/books_audit
       # host: mongo-1
       username: mongodb
       password: admin
