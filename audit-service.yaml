@@ -17,30 +17,23 @@ spring:
   #mongo
   data:
     mongodb:
-      # uri: mongodb://localhost:27017/books_audit
-      # username: mongodb
-      # password: mongodb
-      # profiles:
-      #   active: dev
-      uri: mongodb://mongo:27017/books_audit
-      # host: mongo-1
+      uri: mongodb://localhost:27017/books_audit
       username: mongodb
       password: admin
       database: image_books
-      # port: 27017
       profiles:
         active: dev
-  #kafka
-  kafka:
-    bootstrap-servers: kafka1:29092
-    # producer:
-    #   key-serializer: org.apache.kafka.common.serialization.StringSerializer
-    #   value-serializer: org.apache.kafka.common.serialization.StringSerializer
-    consumer:
-      # group-id: my-group
-      auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#kafka
+kafka:
+  bootstrap-servers: kafka1:29092
+  # producer:
+  #   key-serializer: org.apache.kafka.common.serialization.StringSerializer
+  #   value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  consumer:
+    # group-id: my-group
+    auto-offset-reset: earliest
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 management:
   endpoints:
     web:

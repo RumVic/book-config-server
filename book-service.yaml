@@ -14,6 +14,14 @@ spring:
         register: true
         instanceId: ${spring.application.name}:${spring.cloud.client.hostname}
   #        :${server.port}
+  #mongo
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/image_books
+      username: mongodb
+      password: admin
+      profiles:
+        active: dev
   servlet:
     multipart:
       max-file-size: 2000MB
@@ -25,16 +33,6 @@ spring:
     username: postgres
     password: postgres
     driver: org.postgresql.Driver
-  data:
-    mongodb:
-      uri: mongodb://mongo:27017/image_books
-      # host: mongo-1
-      username: mongodb
-      password: admin
-      # database: image_books
-      # port: 27017
-      profiles:
-        active: dev
   jpa:
     properties:
       hibernate:
@@ -46,6 +44,7 @@ spring:
           use_second_level_cache: true
           region:
             factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+
 # liquibase.properties
 liquibase:
   change-log: classpath:/db/changelog/db.changelog-master.yaml
@@ -62,7 +61,6 @@ kafka:
     #   auto-offset-reset: earliest
     #   key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     #   value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-
 # logging
 management:
   endpoints:

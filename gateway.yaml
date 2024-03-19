@@ -44,7 +44,6 @@ spring:
 #            - Path=/audit/**
 #          filters:
 #            - RewritePath=/audit/(?<segment>.*), /$\{segment}
-
 management:
   endpoints:
     web:
