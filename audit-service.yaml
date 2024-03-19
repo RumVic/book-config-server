@@ -17,7 +17,7 @@ spring:
   #mongo
   data:
     mongodb:
-      uri: mongodb://localhost:27017/books_audit
+      uri: mongodb://mongo:27017/books_audit
       username: mongodb
       password: admin
       database: image_books
