@@ -25,10 +25,7 @@ spring:
         active: dev
 #kafka
 kafka:
-  bootstrap-servers: kafka1:9092
-  # producer:
-  #   key-serializer: org.apache.kafka.common.serialization.StringSerializer
-  #   value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  bootstrap-servers: kafka1:29092
   consumer:
     # group-id: my-group
     auto-offset-reset: earliest
