@@ -29,7 +29,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:postgresql://postgres_container_book:5432/books
+    url: jdbc:postgresql://postgres:5432/books
     username: postgres
     password: postgres
     driver: org.postgresql.Driver
