@@ -9,14 +9,21 @@ spring:
       host: consul
       port: 8500
       discovery:
+  #       enabled: true  # Enable service discovery
+  #       service-name: book-service  # Optional: Custom service name
+  #       health-check-url: http://book-service:8787/actuator/health
+  #       # instance-id: ${spring.application.name}:${random.value}:${server.port}
+  #       instance-id: book-service:8787
+  #       prefer-ip-address: false
+  #       register: true
+  # #     instanceId: ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
         enabled: true  # Enable service discovery
-        service-name: book-service  # Optional: Custom service name
-        health-check-url: http://book-service:8787/actuator/health
-        # instance-id: ${spring.application.name}:${random.value}:${server.port}
-        instance-id: book-service:8787
-        prefer-ip-address: false
-        register: true
-  #     instanceId: ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
+        register: true  # Enable service registration
+        instanceId: ${spring.application.name}:${random.value}:${server.port}
+        healthCheckUrl: http://book-service:8787/actuator/health  # URL for health check
+        healthCheckInterval: 15s  # Interval for health check
+        preferIpAddress: false  # Use service name instead of IP address
+        serviceName: ${spring.application.name}  # Custom service name (optional)
   #mongo
   data:
     mongodb:
