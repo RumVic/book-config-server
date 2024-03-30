@@ -12,12 +12,11 @@ spring:
         enabled: true  # Enable service discovery
         service-name: book-audit  # Optional: Custom service name
         health-check-url: http://book-audit:8686/actuator/health
-        instance-id: ${spring.application.name}:${random.value}:${server.port}
+        # instance-id: ${spring.application.name}:${random.value}:${server.port}
+        instance-id: ${spring.application.name}:${server.port}
         prefer-ip-address: false
         register: true
-        # ${spring.application.name}
-        # :${spring.cloud.client.hostname}
-  #        :${server.port}
+        # ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
   #mongo
   data:
     mongodb:

@@ -12,7 +12,8 @@ spring:
         service-name: gateway-service  # Optional: Custom service name
         register: true
         health-check-url: http://gateway:8585/actuator/health
-        instance-id: ${spring.application.name}:${random.value}:${server.port}
+        # instance-id: ${spring.application.name}:${random.value}:${server.port}
+        instance-id: ${spring.application.name}:${server.port}
         prefer-ip-address: false
   
     gateway:
