@@ -16,11 +16,11 @@ spring:
         # # instance-id: ${spring.application.name}:${random.value}:${server.port}
         enabled: true  # Enable service discovery
         register: true  # Enable service registration
-        instanceId: ${spring.application.name}:${server.port}
+        # instanceId: ${spring.application.name}:${server.port}
         # healthCheckUrl: http://gateway:8585/actuator/health  # URL for health check
         healthCheckInterval: 15s  # Interval for health check
         preferIpAddress: false  # Use service name instead of IP address
-        service-name: ${spring.application.name}  # Custom service name (optional)
+        # service-name: ${spring.application.name}  # Custom service name (optional)
   
     gateway:
       routes:
