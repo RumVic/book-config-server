@@ -14,13 +14,13 @@ spring:
         # # health-check-url: http://gateway:8585/actuator/health
         # health-check-url: http://gateway:8585/actuator/health
         # # instance-id: ${spring.application.name}:${random.value}:${server.port}
-        enabled: true  # Enable service discovery
-        register: true  # Enable service registration
-        # instanceId: ${spring.application.name}:${server.port}
-        # healthCheckUrl: http://gateway:8585/actuator/health  # URL for health check
-        healthCheckInterval: 15s  # Interval for health check
-        preferIpAddress: false  # Use service name instead of IP address
-        # service-name: ${spring.application.name}  # Custom service name (optional)
+        enabled: true
+        register: true
+        instanceId: ${spring.application.name}:${server.port}
+        healthCheckUrl: http://gateway.default.svc.cluster.local:8585/actuator/health  # Pointing to the Kubernetes service
+        healthCheckInterval: 15s
+        preferIpAddress: false
+        service-name: ${spring.application.name}
   
     gateway:
       routes:
