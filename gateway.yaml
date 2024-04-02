@@ -5,7 +5,7 @@ spring:
     name: gateway
   cloud:
     consul:
-      host: consul-server
+      host: consul-consul-server
       port: 8500
       discovery:
         # enabled: true  # Enable service discovery
