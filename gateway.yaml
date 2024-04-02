@@ -5,8 +5,7 @@ spring:
     name: gateway
   cloud:
     consul:
-      host: consul
-      # consul-server.consul.svc
+      host: consul-server
       port: 8500
       discovery:
         # enabled: true  # Enable service discovery
@@ -48,22 +47,21 @@ spring:
           uri: lb://book-audit
           predicates:
             - Path=/audit/**
-#
 #        - id: book-audit
 #          uri: lb://book-audit
 #          predicates:
 #            - Path=/audit/**
 #          filters:
 #            - RewritePath=/audit/(?<segment>.*), /$\{segment}
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: health
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
 logging:
   level:
     org.springframework.data.mongodb.core: debug
     hibernate: debug
     springframework.cache: debug
-    # org.springframework.cloud.consul: DEBUG
+    org.springframework.cloud.consul: DEBUG
     org.springframework.cloud.gateway: DEBUG
