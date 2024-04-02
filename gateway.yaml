@@ -5,7 +5,8 @@ spring:
     name: gateway
   cloud:
     consul:
-      host: consul-server.consul.svc
+      host: consul
+      # consul-server.consul.svc
       port: 8500
       discovery:
         # enabled: true  # Enable service discovery
@@ -16,11 +17,11 @@ spring:
     #     # # instance-id: ${spring.application.name}:${random.value}:${server.port}
         enabled: true
         register: true
-    #     instanceId: ${spring.application.name}:${server.port}
-    #     healthCheckUrl: http://gateway:8586/actuator/health
-    #     healthCheckInterval: 15s
-    #     preferIpAddress: false
-    #     service-name: ${spring.application.name}
+        instanceId: ${spring.application.name}:${server.port}
+        healthCheckUrl: http://gateway:8586/actuator/health
+        healthCheckInterval: 15s
+        preferIpAddress: false
+        service-name: ${spring.application.name}
   
     gateway:
       routes:
