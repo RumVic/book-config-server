@@ -47,15 +47,15 @@ spring:
 #            - Path=/audit/**
 #          filters:
 #            - RewritePath=/audit/(?<segment>.*), /$\{segment}
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: health
 logging:
   level:
     org.springframework.data.mongodb.core: debug
     hibernate: debug
     springframework.cache: debug
-    org.springframework.cloud.consul: DEBUG
+    # org.springframework.cloud.consul: DEBUG
     org.springframework.cloud.gateway: DEBUG
