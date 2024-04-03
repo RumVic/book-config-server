@@ -5,7 +5,7 @@ spring:
     name: gateway
   cloud:
     consul:
-      host: consul-client.default.svc.cluster.local
+      host: consul-server.consul.svc.cluster.local
       port: 8500
       # scheme: https
       discovery:
