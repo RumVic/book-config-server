@@ -5,9 +5,9 @@ spring:
     name: gateway
   cloud:
     consul:
-      host: consul-server.consul.svc.cluster.local
-      port: 8501
-      scheme: https
+      host: consul-client.default.svc.cluster.local
+      port: 8500
+      # scheme: https
       discovery:
         # enabled: true  # Enable service discovery
     #     # service-name: gateway  # Optional: Custom service name
