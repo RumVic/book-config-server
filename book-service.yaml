@@ -79,4 +79,4 @@ logging:
     hibernate: debug
     springframework:
       cache: debug
-    org.springframework.cloud.consul: DEBUG
+    # org.springframework.cloud.consul: DEBUG
