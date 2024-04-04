@@ -11,9 +11,9 @@ spring:
         enabled: true
         register: true
         instanceId: ${spring.application.name}:${server.port}
-        # healthCheckUrl: http://actuator/health
+        healthCheckUrl: http://gateway:8500/actuator/health
         # healthCheckUrl: http://gateway.default.svc.cluster.local:8585/actuator/health
-        # healthCheckInterval: 15s
+        healthCheckInterval: 15s
         preferIpAddress: false
         service-name: ${spring.application.name}
         instance-id: ${spring.application.name}:${server.port}
