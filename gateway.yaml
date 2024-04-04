@@ -4,19 +4,19 @@ spring:
   application:
     name: gateway
   cloud:
-    consul:
-      host: consul-server.consul.svc.cluster.local
-      port: 8500
-      discovery:
-        enabled: true
-        register: true
-        instanceId: ${spring.application.name}:${server.port}
-        # healthCheckUrl: http://gateway:8585/actuator/health
-        healthCheckUrl: http://gateway.default.svc.cluster.local:8585/actuator/health
-        healthCheckInterval: 15s
-        preferIpAddress: false
-        service-name: ${spring.application.name}
-        instance-id: ${spring.application.name}:${server.port}
+    # consul:
+    #   host: consul-server.consul.svc.cluster.local
+    #   port: 8500
+    #   discovery:
+    #     enabled: true
+    #     register: true
+    #     instanceId: ${spring.application.name}:${server.port}
+    #     # healthCheckUrl: http://gateway:8585/actuator/health
+    #     healthCheckUrl: http://gateway.default.svc.cluster.local:8585/actuator/health
+    #     healthCheckInterval: 15s
+    #     preferIpAddress: false
+    #     service-name: ${spring.application.name}
+    #     instance-id: ${spring.application.name}:${server.port}
   
     gateway:
       routes:
@@ -58,5 +58,5 @@ logging:
     org.springframework.data.mongodb.core: debug
     hibernate: debug
     springframework.cache: debug
-    org.springframework.cloud.consul: DEBUG
+    # org.springframework.cloud.consul: DEBUG
     org.springframework.cloud.gateway: DEBUG
