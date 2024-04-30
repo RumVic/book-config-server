@@ -33,7 +33,7 @@ spring:
       profiles:
         active: dev
   kafka:
-    bootstrap-servers: kafka1:29092
+    bootstrapServers: kafka1:29092
     consumer:
       group-id: my-group
       auto-offset-reset: earliest
