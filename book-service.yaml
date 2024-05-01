@@ -72,6 +72,7 @@ management:
         include: health
 logging:
   level:
+    org.apache.kafka: debug
     org.springframework.data.mongodb.core: debug
     hibernate: debug
     springframework:

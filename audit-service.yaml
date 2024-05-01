@@ -40,6 +40,10 @@ spring:
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
 management:
   endpoints:
     web:
@@ -48,4 +52,5 @@ management:
 logging:
   level:
     org.springframework.data.mongodb.core: debug
+    org.apache.kafka: debug
     # org.springframework.cloud.consul: DEBUG
