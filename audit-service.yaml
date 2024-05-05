@@ -3,26 +3,26 @@ server:
 spring:
   application:
     name: book-audit
-  # cloud:
-    # consul:
-    #   host: consul
-    #   port: 8500
-    #   discovery:
-    #     enabled: true  # Enable service discovery
-    #     # service-name: book-audit  # Optional: Custom service name
-    #     # # health-check-url: http://book-audit:8686/actuator/health
-    #     # health-check-url: http://book-audit:8686/actuator/health
-    #     # # instance-id: ${spring.application.name}:${random.value}:${server.port}
-    #     # instance-id: book-audit:8686
-    #     # prefer-ip-address: false
-    #     # register: true
-    #     # # ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}s
-    #     register: true  # Enable service registration
-    #     instanceId: ${spring.application.name}:${server.port}
-    #     healthCheckUrl: http://book-audit:8686/actuator/health  # URL for health check
-    #     healthCheckInterval: 15s  # Interval for health check
-    #     preferIpAddress: false  # Use service name instead of IP address
-    #     service-name: ${spring.application.name}  # Custom service name (optional)
+  cloud:
+    consul:
+      host: consul
+      port: 8500
+      discovery:
+        enabled: true  # Enable service discovery
+        # service-name: book-audit  # Optional: Custom service name
+        # # health-check-url: http://book-audit:8686/actuator/health
+        # health-check-url: http://book-audit:8686/actuator/health
+        # # instance-id: ${spring.application.name}:${random.value}:${server.port}
+        # instance-id: book-audit:8686
+        # prefer-ip-address: false
+        # register: true
+        # # ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}s
+        register: true  # Enable service registration
+        instanceId: ${spring.application.name}:${server.port}
+        healthCheckUrl: http://book-audit:8686/actuator/health  # URL for health check
+        healthCheckInterval: 15s  # Interval for health check
+        preferIpAddress: false  # Use service name instead of IP address
+        service-name: ${spring.application.name}  # Custom service name (optional)
   #mongo
   data:
     mongodb:
@@ -51,5 +51,6 @@ management:
         include: health
 logging:
   level:
+    org.apache.kafka: debug
     org.springframework.data.mongodb.core: debug
-    # org.springframework.cloud.consul: DEBUG
+    org.springframework.cloud.consul: DEBUG
